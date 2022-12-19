@@ -122,14 +122,22 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MainForm.cpp" />
+    <ClCompile Include="MyForm5.cpp" />
     <ClCompile Include="NeuralScreen.cpp" />
     <ClCompile Include="Source.cpp" />
+    <ClCompile Include="TestwithoutPanel.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MainForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="MyForm5.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="NeuralScreen.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="TestwithoutPanel.h">
       <FileType>CppForm</FileType>
     </ClInclude>
   </ItemGroup>
@@ -137,8 +145,14 @@
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.h</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MyForm5.resx">
+      <DependentUpon>MyForm5.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="NeuralScreen.resx">
       <DependentUpon>NeuralScreen.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestwithoutPanel.resx">
+      <DependentUpon>TestwithoutPanel.h</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

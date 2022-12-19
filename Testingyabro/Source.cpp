@@ -1,5 +1,7 @@
 #include "MainForm.h"
 #include "NeuralScreen.h"
+#include "MyForm5.h"
+#include "TestwithoutPanel.h"
 
 using namespace System;
 using namespace System::Windows::Forms;

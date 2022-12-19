@@ -1,5 +1,6 @@
 #pragma once
 #include <list>
+#include <ctime>
 namespace Testingyabro {
 
 	using namespace System;
@@ -263,6 +264,7 @@ namespace Testingyabro {
 			this->ResumeLayout(false);
 
 		}
+		
 #pragma endregion
 	private: System::Void panel1_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
 		panel1->BackColor = System::Drawing::Color::Transparent;
@@ -382,6 +384,7 @@ private: System::Void panel3_Paint(System::Object^ sender, System::Windows::Form
 	}
 	Number0->ForeColor = Color::Green;
 }
+
 
 };
 }

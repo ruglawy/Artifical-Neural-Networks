@@ -24,6 +24,7 @@ namespace Testingyabro {
 			//
 			//TODO: Add the constructor code here
 			//
+			//this->FormBorderStyle =
 		}
 
 	protected:
@@ -66,6 +67,7 @@ namespace Testingyabro {
 
 
 	private: System::Windows::Forms::Panel^ NeuralPanel;
+
 	private: bool panelDrawn = false;
 		   
 
@@ -78,21 +80,22 @@ namespace Testingyabro {
 		void InitializeComponent(void)
 		{
 			this->NeuralPanel = (gcnew System::Windows::Forms::Panel());
-			this->labelNumber0 = (gcnew System::Windows::Forms::Label());
-			this->labelNumber1 = (gcnew System::Windows::Forms::Label());
-			this->labelNumber2 = (gcnew System::Windows::Forms::Label());
-			this->labelNumber3 = (gcnew System::Windows::Forms::Label());
-			this->labelNumber4 = (gcnew System::Windows::Forms::Label());
-			this->labelNumber5 = (gcnew System::Windows::Forms::Label());
-			this->labelNumber6 = (gcnew System::Windows::Forms::Label());
-			this->labelNumber7 = (gcnew System::Windows::Forms::Label());
-			this->labelNumber8 = (gcnew System::Windows::Forms::Label());
 			this->labelNumber9 = (gcnew System::Windows::Forms::Label());
+			this->labelNumber8 = (gcnew System::Windows::Forms::Label());
+			this->labelNumber7 = (gcnew System::Windows::Forms::Label());
+			this->labelNumber6 = (gcnew System::Windows::Forms::Label());
+			this->labelNumber5 = (gcnew System::Windows::Forms::Label());
+			this->labelNumber4 = (gcnew System::Windows::Forms::Label());
+			this->labelNumber3 = (gcnew System::Windows::Forms::Label());
+			this->labelNumber2 = (gcnew System::Windows::Forms::Label());
+			this->labelNumber1 = (gcnew System::Windows::Forms::Label());
+			this->labelNumber0 = (gcnew System::Windows::Forms::Label());
 			this->NeuralPanel->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// NeuralPanel
 			// 
+			this->NeuralPanel->BackColor = System::Drawing::Color::Black;
 			this->NeuralPanel->Controls->Add(this->labelNumber9);
 			this->NeuralPanel->Controls->Add(this->labelNumber8);
 			this->NeuralPanel->Controls->Add(this->labelNumber7);
@@ -109,133 +112,150 @@ namespace Testingyabro {
 			this->NeuralPanel->TabIndex = 0;
 			this->NeuralPanel->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &NeuralScreen::NeuralPanel_Paint);
 			// 
-			// labelNumber0
+			// labelNumber9
 			// 
-			this->labelNumber0->AutoSize = true;
-			this->labelNumber0->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->labelNumber9->AutoSize = true;
+			this->labelNumber9->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->labelNumber9->FlatStyle = System::Windows::Forms::FlatStyle::System;
+			this->labelNumber9->Font = (gcnew System::Drawing::Font(L"Cambria", 16.2F, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->labelNumber0->ForeColor = System::Drawing::SystemColors::ControlLight;
-			this->labelNumber0->Location = System::Drawing::Point(1107, 210);
-			this->labelNumber0->Name = L"labelNumber0";
-			this->labelNumber0->Size = System::Drawing::Size(31, 32);
-			this->labelNumber0->TabIndex = 0;
-			this->labelNumber0->Text = L"0";
-			// 
-			// labelNumber1
-			// 
-			this->labelNumber1->AutoSize = true;
-			this->labelNumber1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->labelNumber1->ForeColor = System::Drawing::SystemColors::ControlLight;
-			this->labelNumber1->Location = System::Drawing::Point(1107, 251);
-			this->labelNumber1->Name = L"labelNumber1";
-			this->labelNumber1->Size = System::Drawing::Size(31, 32);
-			this->labelNumber1->TabIndex = 1;
-			this->labelNumber1->Text = L"1";
-			// 
-			// labelNumber2
-			// 
-			this->labelNumber2->AutoSize = true;
-			this->labelNumber2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->labelNumber2->ForeColor = System::Drawing::SystemColors::ControlLight;
-			this->labelNumber2->Location = System::Drawing::Point(1107, 292);
-			this->labelNumber2->Name = L"labelNumber2";
-			this->labelNumber2->Size = System::Drawing::Size(31, 32);
-			this->labelNumber2->TabIndex = 2;
-			this->labelNumber2->Text = L"2";
-			// 
-			// labelNumber3
-			// 
-			this->labelNumber3->AutoSize = true;
-			this->labelNumber3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->labelNumber3->ForeColor = System::Drawing::SystemColors::ControlLight;
-			this->labelNumber3->Location = System::Drawing::Point(1107, 333);
-			this->labelNumber3->Name = L"labelNumber3";
-			this->labelNumber3->Size = System::Drawing::Size(31, 32);
-			this->labelNumber3->TabIndex = 3;
-			this->labelNumber3->Text = L"3";
-			// 
-			// labelNumber4
-			// 
-			this->labelNumber4->AutoSize = true;
-			this->labelNumber4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->labelNumber4->ForeColor = System::Drawing::SystemColors::ControlLight;
-			this->labelNumber4->Location = System::Drawing::Point(1107, 374);
-			this->labelNumber4->Name = L"labelNumber4";
-			this->labelNumber4->Size = System::Drawing::Size(31, 32);
-			this->labelNumber4->TabIndex = 4;
-			this->labelNumber4->Text = L"4";
-			// 
-			// labelNumber5
-			// 
-			this->labelNumber5->AutoSize = true;
-			this->labelNumber5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->labelNumber5->ForeColor = System::Drawing::SystemColors::ControlLight;
-			this->labelNumber5->Location = System::Drawing::Point(1107, 416);
-			this->labelNumber5->Name = L"labelNumber5";
-			this->labelNumber5->Size = System::Drawing::Size(31, 32);
-			this->labelNumber5->TabIndex = 5;
-			this->labelNumber5->Text = L"5";
-			// 
-			// labelNumber6
-			// 
-			this->labelNumber6->AutoSize = true;
-			this->labelNumber6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->labelNumber6->ForeColor = System::Drawing::SystemColors::ControlLight;
-			this->labelNumber6->Location = System::Drawing::Point(1107, 458);
-			this->labelNumber6->Name = L"labelNumber6";
-			this->labelNumber6->Size = System::Drawing::Size(31, 32);
-			this->labelNumber6->TabIndex = 6;
-			this->labelNumber6->Text = L"6";
-			// 
-			// labelNumber7
-			// 
-			this->labelNumber7->AutoSize = true;
-			this->labelNumber7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->labelNumber7->ForeColor = System::Drawing::SystemColors::ControlLight;
-			this->labelNumber7->Location = System::Drawing::Point(1107, 499);
-			this->labelNumber7->Name = L"labelNumber7";
-			this->labelNumber7->Size = System::Drawing::Size(31, 32);
-			this->labelNumber7->TabIndex = 7;
-			this->labelNumber7->Text = L"7";
+			this->labelNumber9->ForeColor = System::Drawing::SystemColors::ControlLight;
+			this->labelNumber9->Location = System::Drawing::Point(1107, 572);
+			this->labelNumber9->Name = L"labelNumber9";
+			this->labelNumber9->Size = System::Drawing::Size(30, 33);
+			this->labelNumber9->TabIndex = 9;
+			this->labelNumber9->Text = L"9";
+			this->labelNumber9->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			// 
 			// labelNumber8
 			// 
 			this->labelNumber8->AutoSize = true;
-			this->labelNumber8->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->labelNumber8->FlatStyle = System::Windows::Forms::FlatStyle::System;
+			this->labelNumber8->Font = (gcnew System::Drawing::Font(L"Cambria", 16.2F, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->labelNumber8->ForeColor = System::Drawing::SystemColors::ControlLight;
-			this->labelNumber8->Location = System::Drawing::Point(1107, 540);
+			this->labelNumber8->Location = System::Drawing::Point(1107, 531);
 			this->labelNumber8->Name = L"labelNumber8";
-			this->labelNumber8->Size = System::Drawing::Size(31, 32);
+			this->labelNumber8->Size = System::Drawing::Size(30, 33);
 			this->labelNumber8->TabIndex = 8;
 			this->labelNumber8->Text = L"8";
 			// 
-			// labelNumber9
+			// labelNumber7
 			// 
-			this->labelNumber9->AutoSize = true;
-			this->labelNumber9->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->labelNumber7->AutoSize = true;
+			this->labelNumber7->FlatStyle = System::Windows::Forms::FlatStyle::System;
+			this->labelNumber7->Font = (gcnew System::Drawing::Font(L"Cambria", 16.2F, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->labelNumber9->ForeColor = System::Drawing::SystemColors::ControlLight;
-			this->labelNumber9->Location = System::Drawing::Point(1107, 581);
-			this->labelNumber9->Name = L"labelNumber9";
-			this->labelNumber9->Size = System::Drawing::Size(31, 32);
-			this->labelNumber9->TabIndex = 9;
-			this->labelNumber9->Text = L"9";
+			this->labelNumber7->ForeColor = System::Drawing::SystemColors::ControlLight;
+			this->labelNumber7->Location = System::Drawing::Point(1107, 499);
+			this->labelNumber7->Name = L"labelNumber7";
+			this->labelNumber7->Size = System::Drawing::Size(30, 33);
+			this->labelNumber7->TabIndex = 7;
+			this->labelNumber7->Text = L"7";
+			// 
+			// labelNumber6
+			// 
+			this->labelNumber6->AutoSize = true;
+			this->labelNumber6->FlatStyle = System::Windows::Forms::FlatStyle::System;
+			this->labelNumber6->Font = (gcnew System::Drawing::Font(L"Cambria", 16.2F, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->labelNumber6->ForeColor = System::Drawing::SystemColors::ControlLight;
+			this->labelNumber6->Location = System::Drawing::Point(1107, 458);
+			this->labelNumber6->Name = L"labelNumber6";
+			this->labelNumber6->Size = System::Drawing::Size(30, 33);
+			this->labelNumber6->TabIndex = 6;
+			this->labelNumber6->Text = L"6";
+			// 
+			// labelNumber5
+			// 
+			this->labelNumber5->AutoSize = true;
+			this->labelNumber5->FlatStyle = System::Windows::Forms::FlatStyle::System;
+			this->labelNumber5->Font = (gcnew System::Drawing::Font(L"Cambria", 16.2F, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->labelNumber5->ForeColor = System::Drawing::SystemColors::ControlLight;
+			this->labelNumber5->Location = System::Drawing::Point(1107, 416);
+			this->labelNumber5->Name = L"labelNumber5";
+			this->labelNumber5->Size = System::Drawing::Size(30, 33);
+			this->labelNumber5->TabIndex = 5;
+			this->labelNumber5->Text = L"5";
+			// 
+			// labelNumber4
+			// 
+			this->labelNumber4->AutoSize = true;
+			this->labelNumber4->FlatStyle = System::Windows::Forms::FlatStyle::System;
+			this->labelNumber4->Font = (gcnew System::Drawing::Font(L"Cambria", 16.2F, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->labelNumber4->ForeColor = System::Drawing::SystemColors::ControlLight;
+			this->labelNumber4->Location = System::Drawing::Point(1107, 374);
+			this->labelNumber4->Name = L"labelNumber4";
+			this->labelNumber4->Size = System::Drawing::Size(30, 33);
+			this->labelNumber4->TabIndex = 4;
+			this->labelNumber4->Text = L"4";
+			// 
+			// labelNumber3
+			// 
+			this->labelNumber3->AutoSize = true;
+			this->labelNumber3->FlatStyle = System::Windows::Forms::FlatStyle::System;
+			this->labelNumber3->Font = (gcnew System::Drawing::Font(L"Cambria", 16.2F, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->labelNumber3->ForeColor = System::Drawing::SystemColors::ControlLight;
+			this->labelNumber3->Location = System::Drawing::Point(1107, 333);
+			this->labelNumber3->Name = L"labelNumber3";
+			this->labelNumber3->Size = System::Drawing::Size(30, 33);
+			this->labelNumber3->TabIndex = 3;
+			this->labelNumber3->Text = L"3";
+			// 
+			// labelNumber2
+			// 
+			this->labelNumber2->AutoSize = true;
+			this->labelNumber2->FlatStyle = System::Windows::Forms::FlatStyle::System;
+			this->labelNumber2->Font = (gcnew System::Drawing::Font(L"Cambria", 16.2F, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->labelNumber2->ForeColor = System::Drawing::SystemColors::ControlLight;
+			this->labelNumber2->Location = System::Drawing::Point(1107, 292);
+			this->labelNumber2->Name = L"labelNumber2";
+			this->labelNumber2->Size = System::Drawing::Size(30, 33);
+			this->labelNumber2->TabIndex = 2;
+			this->labelNumber2->Text = L"2";
+			// 
+			// labelNumber1
+			// 
+			this->labelNumber1->AutoSize = true;
+			this->labelNumber1->FlatStyle = System::Windows::Forms::FlatStyle::System;
+			this->labelNumber1->Font = (gcnew System::Drawing::Font(L"Cambria", 16.2F, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->labelNumber1->ForeColor = System::Drawing::SystemColors::ControlLight;
+			this->labelNumber1->Location = System::Drawing::Point(1107, 251);
+			this->labelNumber1->Name = L"labelNumber1";
+			this->labelNumber1->Size = System::Drawing::Size(30, 33);
+			this->labelNumber1->TabIndex = 1;
+			this->labelNumber1->Text = L"1";
+			// 
+			// labelNumber0
+			// 
+			this->labelNumber0->AutoSize = true;
+			this->labelNumber0->FlatStyle = System::Windows::Forms::FlatStyle::System;
+			this->labelNumber0->Font = (gcnew System::Drawing::Font(L"Cambria", 16.2F, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->labelNumber0->ForeColor = System::Drawing::SystemColors::ControlLight;
+			this->labelNumber0->Location = System::Drawing::Point(1107, 210);
+			this->labelNumber0->Name = L"labelNumber0";
+			this->labelNumber0->Size = System::Drawing::Size(30, 33);
+			this->labelNumber0->TabIndex = 0;
+			this->labelNumber0->Text = L"0";
 			// 
 			// NeuralScreen
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->AutoValidate = System::Windows::Forms::AutoValidate::EnablePreventFocusChange;
 			this->ClientSize = System::Drawing::Size(1440, 924);
 			this->Controls->Add(this->NeuralPanel);
+			this->DoubleBuffered = true;
+			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedDialog;
+			this->MaximizeBox = false;
 			this->Name = L"NeuralScreen";
+			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"NeuralScreen";
 			this->Load += gcnew System::EventHandler(this, &NeuralScreen::NeuralScreen_Load);
 			this->NeuralPanel->ResumeLayout(false);
@@ -248,9 +268,8 @@ namespace Testingyabro {
 		srand(time(NULL));
 		System::Drawing::Image^ image;
 		image = System::Drawing::Image::FromFile("C:\\Users\\Kareem\\Desktop\\links.jpeg");
-		this->BackgroundImage = image;
-		NeuralPanel->BackColor = System::Drawing::Color::Transparent;
-		
+		//this->BackgroundImage = image;
+		//NeuralPanel->BackColor = System::Drawing::Color::Transparent;
 	}
 	private: System::Void NeuralPanel_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
 			System::Drawing::Image^ image;
@@ -259,7 +278,7 @@ namespace Testingyabro {
 			System::Drawing::Graphics^ g = e->Graphics;
 			//BufferedGraphics^ buffer = BufferedGraphicsManager::Current->Allocate(e->Graphics, e->ClipRectangle);
 			//Graphics^ g = buffer->Graphics;
-			g->DrawImage(image, 0, 0);
+			//g->DrawImage(image, 0, 0);
 			//System::Drawing::SolidBrush^ brush = gcnew System::Drawing::SolidBrush(System::Drawing::Color::Green);
 			//g->FillEllipse(brush, 0, 0, 100, 100);
 			System::Drawing::Pen^ pen = gcnew System::Drawing::Pen(System::Drawing::Color::White);
@@ -376,7 +395,7 @@ namespace Testingyabro {
 				for (int j = 0; j < NodesLevel1.Count; j++) {
 					//////////////RANDOM COLOR VALUES FOR TESTING/////////
 					int color1 = rand() % 256; int color2 = rand() % 256; int color3 = rand() % 256;
-					penLine->Color = Color::FromArgb(100, color1, color2, color3);
+					penLine->Color = Color::FromArgb(60, 255, 255, 255);
 					//////////////RANDOM COLOR VALUES FOR TESTING/////////
 
 					int x1 = NodesInput[i].X + NodesInput[i].Width / 2;
@@ -399,7 +418,7 @@ namespace Testingyabro {
 				for (int j = 0; j < NodesLevel2.Count; j++) {
 					//////////////RANDOM COLOR VALUES FOR TESTING/////////
 					int color1 = rand() % 256; int color2 = rand() % 256; int color3 = rand() % 256;
-					penLine->Color = Color::FromArgb(100, color1, color2, color3);
+					penLine->Color = Color::FromArgb(60, 255, 255, 255);
 					//////////////RANDOM COLOR VALUES FOR TESTING/////////
 
 					int x1 = NodesLevel1[i].X + NodesLevel1[i].Width / 2;
@@ -422,7 +441,7 @@ namespace Testingyabro {
 				for (int j = 0; j < NodesNumbers.Count; j++) {
 					//////////////RANDOM COLOR VALUES FOR TESTING/////////
 					int color1 = rand() % 256; int color2 = rand() % 256; int color3 = rand() % 256;
-					penLine->Color = Color::FromArgb(100, color1, color2, color3);
+					penLine->Color = Color::FromArgb(60, 255, 255, 255);
 					//////////////RANDOM COLOR VALUES FOR TESTING/////////
 
 					int x1 = NodesLevel2[i].X + NodesLevel2[i].Width / 2;
