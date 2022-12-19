@@ -121,6 +121,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="HomeScreen.cpp" />
     <ClCompile Include="MainForm.cpp" />
     <ClCompile Include="MyForm5.cpp" />
     <ClCompile Include="NeuralScreen.cpp" />
@@ -128,6 +129,9 @@
     <ClCompile Include="TestwithoutPanel.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="HomeScreen.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="MainForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -142,6 +146,9 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="HomeScreen.resx">
+      <DependentUpon>HomeScreen.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.h</DependentUpon>
     </EmbeddedResource>
