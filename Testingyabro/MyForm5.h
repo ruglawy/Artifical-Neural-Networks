@@ -1,5 +1,7 @@
 #pragma once
-#include "NeuralScreen.h"
+//#include "NeuralScreen.h"
+#include <vector>
+//using namespace std;
 
 namespace Testingyabro {
 
@@ -9,10 +11,21 @@ namespace Testingyabro {
 	using namespace System::Windows::Forms;
 	using namespace System::Data;
 	using namespace System::Drawing;
+	using namespace std;
 
 	/// <summary>
 	/// Summary for MyForm
 	/// </summary>
+	class Par {
+	public: static vector<int> layerInput;
+	public: static vector<int> layer1;
+	public: static vector<int> layer2;
+	public: static vector<int> layerResult;
+	public: static int idkok[16];
+	public: static int result;
+		  //layerInput[0] = 0;
+		  //static int x;
+	};
 	public ref class MyForm : public System::Windows::Forms::Form
 	{
 	public:
@@ -22,8 +35,10 @@ namespace Testingyabro {
 			//
 			//TODO: Add the constructor code here
 			//
-		}
 
+		}
+	//public: vector<int> layer;
+	
 	protected:
 		/// <summary>
 		/// Clean up any resources being used.
@@ -79,11 +94,11 @@ namespace Testingyabro {
 		}
 #pragma endregion
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-		NeuralScreen^ form = gcnew NeuralScreen();
-		this->Hide();
-		form->ShowDialog();
+		//NeuralScreen^ form = gcnew NeuralScreen();
+		//this->Hide();
+		//form->ShowDialog();
 		//form->BringToFront();
-		this->Close();
+		//this->Close();
 	}
 	};
 }

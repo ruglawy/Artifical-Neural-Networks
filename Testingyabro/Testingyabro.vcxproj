@@ -79,6 +79,7 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <AdditionalDependencies />
@@ -121,17 +122,32 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\Artificial-Neural-Network-in-Cpp-main\data.cpp" />
+    <ClCompile Include="..\..\Artificial-Neural-Network-in-Cpp-main\n.cpp" />
+    <ClCompile Include="..\..\Artificial-Neural-Network-in-Cpp-main\NeuralNetworkCppOnly.h" />
+    <ClCompile Include="..\..\Artificial-Neural-Network-in-Cpp-main\x.cpp" />
     <ClCompile Include="HomeScreen.cpp" />
+    <ClCompile Include="LayersToShow.cpp" />
     <ClCompile Include="MainForm.cpp" />
     <ClCompile Include="MyForm5.cpp" />
     <ClCompile Include="NeuralScreen.cpp" />
+    <ClCompile Include="OK.cpp" />
+    <ClCompile Include="Paramters.cpp" />
     <ClCompile Include="Source.cpp" />
+    <ClCompile Include="testagain.cpp" />
     <ClCompile Include="TestwithoutPanel.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\Artificial-Neural-Network-in-Cpp-main\x.hpp" />
+    <ClInclude Include="Header.h" />
     <ClInclude Include="HomeScreen.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="LayersClass.h" />
+    <ClInclude Include="LayersToShow.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="MainDriver.h" />
     <ClInclude Include="MainForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -141,6 +157,12 @@
     <ClInclude Include="NeuralScreen.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="OK.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="OkTest.h" />
+    <ClInclude Include="Paramters.h" />
+    <ClInclude Include="testagain.h" />
     <ClInclude Include="TestwithoutPanel.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -158,9 +180,15 @@
     <EmbeddedResource Include="NeuralScreen.resx">
       <DependentUpon>NeuralScreen.h</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="OK.resx">
+      <DependentUpon>OK.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TestwithoutPanel.resx">
       <DependentUpon>TestwithoutPanel.h</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\Artificial-Neural-Network-in-Cpp-main\.DS_Store" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

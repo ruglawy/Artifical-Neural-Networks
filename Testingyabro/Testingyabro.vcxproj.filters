@@ -33,6 +33,30 @@
     <ClCompile Include="HomeScreen.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Artificial-Neural-Network-in-Cpp-main\NeuralNetworkCppOnly.h">
+      <Filter>Header Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Artificial-Neural-Network-in-Cpp-main\data.cpp">
+      <Filter>Header Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Artificial-Neural-Network-in-Cpp-main\n.cpp">
+      <Filter>Header Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Artificial-Neural-Network-in-Cpp-main\x.cpp">
+      <Filter>Header Files</Filter>
+    </ClCompile>
+    <ClCompile Include="OK.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LayersToShow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Paramters.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="testagain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MainForm.h">
@@ -50,5 +74,37 @@
     <ClInclude Include="HomeScreen.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Header.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Artificial-Neural-Network-in-Cpp-main\x.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MainDriver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OkTest.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OK.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LayersClass.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LayersToShow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Paramters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="testagain.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\Artificial-Neural-Network-in-Cpp-main\.DS_Store">
+      <Filter>Header Files</Filter>
+    </None>
   </ItemGroup>
 </Project>

@@ -1,5 +1,20 @@
 #pragma once
 #include "NeuralScreen.h"
+#include "MyForm5.h"
+#include "OK.h"
+#include <vector>
+#include <vector>
+#include <windows.h>
+#include <objidl.h>
+#include <gdiplus.h>
+//#include "Paramters.h"
+//#include "LayersToShow.h"
+//#include "LayersClass.h"
+using namespace Gdiplus;
+#pragma comment (lib,"Gdiplus.lib")
+
+//#include <gdiplus.h>
+//#include "MainDriver.h"
 
 namespace Testingyabro {
 
@@ -13,7 +28,14 @@ namespace Testingyabro {
 	/// <summary>
 	/// Summary for HomeScreen
 	/// </summary>
-	
+      //vector<int> NeuralNetworkParams = { 28 * 28, 16, 16, 10 };
+	  //NeuralNetwork n = NeuralNetwork(NeuralNetworkParams);
+	/*public class Param {
+	public: vector<int> layer0;
+	public: vector<int> layer1;
+	public: vector<int> layer2;
+	public: vector<int> layer3;
+	};*/
 	public ref class HomeScreen : public System::Windows::Forms::Form
 	{
 	public:
@@ -23,8 +45,11 @@ namespace Testingyabro {
 			//
 			//TODO: Add the constructor code here
 			//
+			//vector<int> NeuralNetworkParams = { 28 * 28, 16, 16, 10 };
+			//NeuralNetwork n = NeuralNetwork(NeuralNetworkParams);
 		}
-
+	//public: vector<int> NeuralNetworkParams = { 28 * 28, 16, 16, 10 };
+	//public: NeuralNetwork = NeuralNetwork(NeuralNetworkParams);
 	protected:
 		/// <summary>
 		/// Clean up any resources being used.
@@ -106,6 +131,7 @@ namespace Testingyabro {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->BackColor = System::Drawing::SystemColors::Control;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->ClientSize = System::Drawing::Size(1440, 924);
@@ -117,6 +143,7 @@ namespace Testingyabro {
 			this->Name = L"HomeScreen";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"HomeScreen";
+			this->TransparencyKey = System::Drawing::Color::White;
 			this->Load += gcnew System::EventHandler(this, &HomeScreen::HomeScreen_Load);
 			this->ResumeLayout(false);
 			this->PerformLayout();
@@ -129,15 +156,103 @@ namespace Testingyabro {
 		//this->BackgroundImage = image;
 		//this->label1->ForeColor = Color::FromArgb(9, SystemColors::ActiveBorder);
 	}
+	/*public: int sigmoid(int s) {
+		return int(255*(1 / (1 + exp(-s))));
+	}*/
+	public: void normalize(vector<int> &v) {
+		int max = v[0];
+		int min = max;
+		int newMax = 255, newMin = 0;
+		for (int i = 1; i < v.size(); i++) {
+			if (v[i] > max)
+				max = v[i];
+			if (v[i] < min)
+				min = v[i];
+		}
 
-	
+		for (int i = 0; i < v.size(); i++) {
+			//v[i] = sigmoid(v[i]);
+			/*v[i] += max;
+			v[i] *= 255;
+			v[i] /= (2 * max);*/
+			v[i] = int((v[i] - min) * (double(newMax - newMin)/(max-min)));
+		}
+	}
 private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 	OpenFileDialog^ dia = gcnew OpenFileDialog;
-	dia->Filter = "Image Files|*.bmp;*.jpg;*.jpeg;*.png|All Files|*.*";
+	dia->Filter = "Image Files|*.bmp;*.jpg;*.jpeg;*.png|All Files|*.csv*";
 	dia->FilterIndex = 1;
 	if (dia->ShowDialog() == System::Windows::Forms::DialogResult::OK) {
 		//////////////////INSERT FUNCTION THAT TAKES IMAGE AS PARAMETER/////////////////////
-		
+		vector<int> NeuralNetworkParams = { 28 * 28, 16, 16, 10 };
+		NeuralNetwork n = NeuralNetwork(NeuralNetworkParams);
+		String^ path = dia->FileName; //System::IO::Path::GetDirectoryName(dia->FileName);
+		String^ pathmodel = System::IO::Path::GetDirectoryName(dia->FileName) + "\\pretrainedModel";
+		//string pathmodelstring = msclr::interop::marshal_as<std::string>(pathmodel);
+		//path += dia->FileName;
+		wstring idk = msclr::interop::marshal_as<std::wstring>(path);
+		std::wstring filePath = idk;
+		Gdiplus::Bitmap im(filePath.c_str());
+		string pathbro = msclr::interop::marshal_as<std::string>(path);
+		//////
+		std::vector<int> pixels;
+		for (int x = 0; x < im.GetWidth(); x++) {
+			for (int y = 0; y < im.GetHeight(); y++) {
+				Gdiplus::Color color;
+				im.GetPixel(x, y, &color);
+				// Add the color of the pixel to the vector
+				pixels.push_back(color.GetValue());
+			}
+		}
+		String^ pretrainmodel = "C:/Users/Kareem/Desktop/Artificial-Neural-Network-in-Cpp-main/Project/pretrainedModel/";
+		string ptm = msclr::interop::marshal_as<std::string>(pretrainmodel);
+		n.loadPretrainedModel(ptm);
+		int x = n.infer(pathbro);
+		String^ answer = x.ToString(); 
+		//////
+		//string idk = "C:\Users\Kareem\Desktop\download.jpg";
+		//n.infer(pathbro);
+		//n.infer("C:\\Users\\Kareem\\Desktop\\uploadim.jpg");
+		//MessageBox::Show(path);
+		//MessageBox::Show(answer);
+		//Param p;
+		Par p;
+		//p.layerInput = { 0 };
+		p.result = x;
+		p.layerInput = n.getLayerActivations(0);
+		p.layer1 = n.getLayerActivations(1);
+		p.layer2 = n.getLayerActivations(2);
+		p.layerResult = n.getLayerActivations(3);
+
+		normalize(p.layerInput);
+		normalize(p.layer1);
+		normalize(p.layer2);
+		normalize(p.layerResult);
+		//int max = abs(p.layer1[0]);
+		/*for (int i = 1; i < 16; i++) {
+			if (abs(p.layer1[i]) > max)
+				max = abs(p.layer1[i]);
+		}
+		for (int i = 0; i < 16; i++) {
+			p.layer1[i] += max;
+			p.layer1[i] *= 255;
+			p.layer1[i] /= (2*max);
+		}*/
+		for (int i = 0; i < 16; i++)
+			p.idkok[i] = n.getLayerActivations(0)[i];
+		String^ an;
+		for (int i = 0; i < 10; i++) {
+			an += (n.getLayerActivations(3)[i].ToString() + " ");
+			//MessageBox::Show(an);
+		}
+		//MessageBox::Show(an);
+			//p.layerInput.push_back(n.getLayerActivations(0)[i]);
+		//for (int i = 0; i < n.getLayerActivations(1).size(); i++)
+			//p.layer1.push_back(n.getLayerActivations(1)[i]);
+		//for (int i = 0; i < n.getLayerActivations(2).size(); i++)
+			//p.layer2.push_back(n.getLayerActivations(2)[i]);
+		//for (int i = 0; i < n.getLayerActivations(3).size(); i++)
+			//p.layerResult.push_back(n.getLayerActivations(3)[i]);
 		//////////////////INSERT FUNCTION THAT TAKES IMAGE AS PARAMETER/////////////////////
 		/////////TEST////////
 		NeuralScreen^ form = gcnew NeuralScreen;
