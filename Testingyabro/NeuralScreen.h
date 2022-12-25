@@ -328,7 +328,7 @@ namespace Testingyabro {
 			//g->DrawImage(image, 0, 0);
 			System::Drawing::Graphics^ g = e->Graphics;
 			//BufferedGraphics^ buffer = BufferedGraphicsManager::Current->Allocate(e->Graphics, e->ClipRectangle);
-			//Graphics^ g = buffer->Graphics;
+			//Testingyabro::Graphics^ g = buffer->Graphics;
 			//g->DrawImage(image, 0, 0);
 			//System::Drawing::SolidBrush^ brush = gcnew System::Drawing::SolidBrush(System::Drawing::Color::Green);
 			//g->FillEllipse(brush, 0, 0, 100, 100);
@@ -448,7 +448,7 @@ namespace Testingyabro {
 					int color1 = rand() % 256; int color2 = rand() % 256; int color3 = rand() % 256;
 					penLine->Color = System::Drawing::Color::FromArgb(60, 255, 255, 255);
 					//////////////RANDOM COLOR VALUES FOR TESTING/////////
-
+					Sleep(1);
 					int x1 = NodesInput[i].X + NodesInput[i].Width / 2;
 					int y1 = NodesInput[i].Y + NodesInput[i].Height / 2;
 					int x2 = NodesLevel1[j].X + NodesLevel1[j].Width / 2;
@@ -471,7 +471,7 @@ namespace Testingyabro {
 					int color1 = rand() % 256; int color2 = rand() % 256; int color3 = rand() % 256;
 					penLine->Color = System::Drawing::Color::FromArgb(60, 255, 255, 255);
 					//////////////RANDOM COLOR VALUES FOR TESTING/////////
-
+					Sleep(1);
 					int x1 = NodesLevel1[i].X + NodesLevel1[i].Width / 2;
 					int y1 = NodesLevel1[i].Y + NodesLevel1[i].Height / 2;
 					int x2 = NodesLevel2[j].X + NodesLevel2[j].Width / 2;
@@ -494,7 +494,7 @@ namespace Testingyabro {
 					int color1 = rand() % 256; int color2 = rand() % 256; int color3 = rand() % 256;
 					penLine->Color = System::Drawing::Color::FromArgb(60, 255, 255, 255);
 					//////////////RANDOM COLOR VALUES FOR TESTING/////////
-
+					Sleep(1);
 					int x1 = NodesLevel2[i].X + NodesLevel2[i].Width / 2;
 					int y1 = NodesLevel2[i].Y + NodesLevel2[i].Height / 2;
 					int x2 = NodesNumbers[j].X + NodesNumbers[j].Width / 2;
