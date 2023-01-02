@@ -170,7 +170,7 @@ private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e
 		
 		//// --   Loading up a pre-trained model in order to increase the prediction accuracy  -- ////
 		//IMPORTANT MESSAGE// PATH OF pretrainmodel NEEDS TO BE UPDATED IF COMPILED/RUN ON A DIFFERENT PC, PATH IS DIFFERENT WITH EACH PC.
-		//YOU SHOULD REFER TO THE pretrainedModel FOLDER.
+		//YOU SHOULD REFER TO THE pretrainedModel FOLDER.//
 		String^ pretrainmodel = "C:/Users/Kareem/Desktop/iCHEP/ArtificialNeuralNetworks/Artificial-Neural-Network-in-Cpp-main/Project/pretrainedModel/";
 		string ptm = msclr::interop::marshal_as<std::string>(pretrainmodel);
 		n.loadPretrainedModel(ptm);
