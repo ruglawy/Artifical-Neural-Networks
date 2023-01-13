@@ -7,6 +7,7 @@
 #include <windows.h>
 #include <objidl.h>
 #include <gdiplus.h>
+#include "VisualScreen.h"
 using namespace Gdiplus;
 #pragma comment (lib,"Gdiplus.lib")
 
@@ -194,7 +195,8 @@ private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e
 		normalize(p.layer2);
 		normalize(p.layerResult);
 		
-		NeuralScreen^ form = gcnew NeuralScreen(this);
+		//NeuralScreen^ form = gcnew NeuralScreen(this);
+		VisualScreen^ form = gcnew VisualScreen();
 		this->Hide();
 		form->ShowDialog();
 		this->Close();

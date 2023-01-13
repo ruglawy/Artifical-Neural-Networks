@@ -127,6 +127,7 @@
     <ClCompile Include="MainForm.cpp" />
     <ClCompile Include="NeuralScreen.cpp" />
     <ClCompile Include="Source.cpp" />
+    <ClCompile Include="VisualScreen.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="HomeScreen.h">
@@ -142,6 +143,9 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="OK.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="VisualScreen.h">
       <FileType>CppForm</FileType>
     </ClInclude>
   </ItemGroup>
@@ -160,6 +164,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="OK.resx">
       <DependentUpon>OK.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VisualScreen.resx">
+      <DependentUpon>VisualScreen.h</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

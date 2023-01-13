@@ -3,6 +3,7 @@
 #include "MyForm5.h"
 #include "OK.h"
 #include "MyForm5.h"
+#include <Windows.h>
 
 namespace ArtificialNeuralNetworks {
 
@@ -82,6 +83,8 @@ namespace ArtificialNeuralNetworks {
 
 
 
+
+
 	private: System::Windows::Forms::Panel^ NeuralPanel;
 		   
 #pragma region Windows Form Designer generated code
@@ -136,6 +139,7 @@ namespace ArtificialNeuralNetworks {
 			this->labelNumber0->Size = System::Drawing::Size(30, 33);
 			this->labelNumber0->TabIndex = 0;
 			this->labelNumber0->Text = L"0";
+			this->labelNumber0->Visible = false;
 			// 
 			// labelNumber9
 			// 
@@ -151,6 +155,7 @@ namespace ArtificialNeuralNetworks {
 			this->labelNumber9->TabIndex = 9;
 			this->labelNumber9->Text = L"9";
 			this->labelNumber9->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->labelNumber9->Visible = false;
 			// 
 			// labelNumber8
 			// 
@@ -164,6 +169,7 @@ namespace ArtificialNeuralNetworks {
 			this->labelNumber8->Size = System::Drawing::Size(30, 33);
 			this->labelNumber8->TabIndex = 8;
 			this->labelNumber8->Text = L"8";
+			this->labelNumber8->Visible = false;
 			// 
 			// labelNumber7
 			// 
@@ -177,6 +183,7 @@ namespace ArtificialNeuralNetworks {
 			this->labelNumber7->Size = System::Drawing::Size(30, 33);
 			this->labelNumber7->TabIndex = 7;
 			this->labelNumber7->Text = L"7";
+			this->labelNumber7->Visible = false;
 			// 
 			// labelNumber6
 			// 
@@ -190,6 +197,7 @@ namespace ArtificialNeuralNetworks {
 			this->labelNumber6->Size = System::Drawing::Size(30, 33);
 			this->labelNumber6->TabIndex = 6;
 			this->labelNumber6->Text = L"6";
+			this->labelNumber6->Visible = false;
 			// 
 			// labelNumber5
 			// 
@@ -203,6 +211,7 @@ namespace ArtificialNeuralNetworks {
 			this->labelNumber5->Size = System::Drawing::Size(30, 33);
 			this->labelNumber5->TabIndex = 5;
 			this->labelNumber5->Text = L"5";
+			this->labelNumber5->Visible = false;
 			// 
 			// labelNumber4
 			// 
@@ -216,6 +225,7 @@ namespace ArtificialNeuralNetworks {
 			this->labelNumber4->Size = System::Drawing::Size(30, 33);
 			this->labelNumber4->TabIndex = 4;
 			this->labelNumber4->Text = L"4";
+			this->labelNumber4->Visible = false;
 			// 
 			// labelNumber3
 			// 
@@ -229,6 +239,7 @@ namespace ArtificialNeuralNetworks {
 			this->labelNumber3->Size = System::Drawing::Size(30, 33);
 			this->labelNumber3->TabIndex = 3;
 			this->labelNumber3->Text = L"3";
+			this->labelNumber3->Visible = false;
 			// 
 			// labelNumber2
 			// 
@@ -242,6 +253,7 @@ namespace ArtificialNeuralNetworks {
 			this->labelNumber2->Size = System::Drawing::Size(30, 33);
 			this->labelNumber2->TabIndex = 2;
 			this->labelNumber2->Text = L"2";
+			this->labelNumber2->Visible = false;
 			// 
 			// labelNumber1
 			// 
@@ -255,6 +267,7 @@ namespace ArtificialNeuralNetworks {
 			this->labelNumber1->Size = System::Drawing::Size(30, 33);
 			this->labelNumber1->TabIndex = 1;
 			this->labelNumber1->Text = L"1";
+			this->labelNumber1->Visible = false;
 			// 
 			// NeuralScreen
 			// 
@@ -340,6 +353,7 @@ namespace ArtificialNeuralNetworks {
 			for (int i = 0; i < NodesInput.Count; i++) {
 				System::Drawing::Rectangle ellipse = NodesInput[i];
 				g->DrawEllipse(pen, ellipse);
+				Sleep(1);
 			}
 
 			for (int i = 0; i < smallNodes.Count; i++) {
@@ -348,6 +362,7 @@ namespace ArtificialNeuralNetworks {
 				color = System::Drawing::Color::FromArgb(255, System::Drawing::Color::White);
 				brush->Color = color;
 				g->FillEllipse(brush, ellipse);
+				Sleep(1);
 			}
 			newdist = distance;
 
@@ -357,10 +372,10 @@ namespace ArtificialNeuralNetworks {
 				NodesLevel1.Add(System::Drawing::Rectangle(distBetLvls * 2, newdist + 100, 20, 20));
 				newdist += distance;
 			}
-			for (int i = 0; i < NodesLevel1.Count; i++) {
+			/*for (int i = 0; i < NodesLevel1.Count; i++) {
 				System::Drawing::Rectangle ellipse = NodesLevel1[i];
 				g->DrawEllipse(pen, ellipse);
-			}
+			}*/
 			newdist = distance;
 
 			//// --                             NODES LEVEL TWO                              -- ////
@@ -369,10 +384,10 @@ namespace ArtificialNeuralNetworks {
 				NodesLevel2.Add(System::Drawing::Rectangle(distBetLvls * 3, newdist + 100, 20, 20));
 				newdist += distance;
 			}
-			for (int i = 0; i < NodesLevel2.Count; i++) {
+			/*for (int i = 0; i < NodesLevel2.Count; i++) {
 				System::Drawing::Rectangle ellipse = NodesLevel2[i];
 				g->DrawEllipse(pen, ellipse);
-			}
+			}*/
 			newdist = distance + 7;
 			
 			//// --                             NODES LEVEL RESULT                              -- ////
@@ -381,10 +396,10 @@ namespace ArtificialNeuralNetworks {
 				NodesNumbers.Add(System::Drawing::Rectangle(distBetLvls * 4, newdist + 140, 20, 20));
 				newdist += distance + 7;
 			}
-			for (int i = 0; i < NodesNumbers.Count; i++) {
+			/*for (int i = 0; i < NodesNumbers.Count; i++) {
 				System::Drawing::Rectangle ellipse = NodesNumbers[i];
 				g->DrawEllipse(pen, ellipse);
-			}
+			}*/
 			
 			//// --            Setting up the variables for drawing edges            -- ////
 			System::Drawing::Pen^ penLine = gcnew System::Drawing::Pen(System::Drawing::Color::White);
@@ -399,6 +414,12 @@ namespace ArtificialNeuralNetworks {
 				brush->Color = color;
 				g->FillEllipse(brush, ellipse);
 				Sleep(50);
+			}
+
+			for (int i = 0; i < NodesLevel1.Count; i++) {
+				System::Drawing::Rectangle ellipse = NodesLevel1[i];
+				g->DrawEllipse(pen, ellipse);
+				Sleep(1);
 			}
 			
 			//// --             Drawing edges between Level Input & Level One              -- ////
@@ -437,6 +458,12 @@ namespace ArtificialNeuralNetworks {
 				g->FillEllipse(brush, ellipse);
 				Sleep(50);
 			}
+
+			for (int i = 0; i < NodesLevel2.Count; i++) {
+				System::Drawing::Rectangle ellipse = NodesLevel2[i];
+				g->DrawEllipse(pen, ellipse);
+				Sleep(1);
+			}
 			
 			//// --             Drawing edges between Level One & Level Two              -- ////
 			for (int i = 0; i < NodesLevel1.Count; i++) {
@@ -472,6 +499,12 @@ namespace ArtificialNeuralNetworks {
 				Sleep(50);
 			}
 
+			for (int i = 0; i < NodesNumbers.Count; i++) {
+				System::Drawing::Rectangle ellipse = NodesNumbers[i];
+				g->DrawEllipse(pen, ellipse);
+				Sleep(1);
+			}
+
 			//// --             Drawing edges between Level Two & Level Result              -- ////
 			for (int i = 0; i < NodesLevel2.Count; i++) {
 				for (int j = 0; j < NodesNumbers.Count; j++) {
@@ -496,6 +529,7 @@ namespace ArtificialNeuralNetworks {
 
 			}
 			
+			
 			//// --                             NODES LEVEL RESULT                              -- ////
 			//// --             Filling up the nodes with the given activations              -- ////
 			for (int i = 0; i < NodesNumbers.Count; i++) {
@@ -504,7 +538,19 @@ namespace ArtificialNeuralNetworks {
 				color = System::Drawing::Color::FromArgb(x, System::Drawing::Color::White);
 				brush->Color = color;
 				g->FillEllipse(brush, ellipse);
+				Sleep(50);
 			}
+
+			labelNumber0->Visible = true;
+			labelNumber1->Visible = true;
+			labelNumber2->Visible = true;
+			labelNumber3->Visible = true;
+			labelNumber4->Visible = true;
+			labelNumber5->Visible = true;
+			labelNumber6->Visible = true;
+			labelNumber7->Visible = true;
+			labelNumber8->Visible = true;
+			labelNumber9->Visible = true;
 
 			//// -- A switch for coloring the number predicted with green -- ////
 			//// --           Par::result is the number predicted         -- ////
